@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="CurrenciesTableViewCell" customModule="RevolutCurrencies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKp-l4-hQv">
+                        <rect key="frame" x="16" y="11" width="288" height="48"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1B-Tp-byJ">
+                                <rect key="frame" x="0.0" y="0.0" width="35.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2kJ-ji-bSn">
+                                <rect key="frame" x="35.5" y="0.0" width="232.5" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QFA-nl-34I">
+                                <rect key="frame" x="268" y="0.0" width="20" height="48"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uK9-nY-5SJ" customClass="BorderedTextField" customModule="RevolutCurrencies" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="10.5" width="20" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="K8p-m8-VWZ"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="uK9-nY-5SJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QFA-nl-34I" secondAttribute="top" id="AYS-x0-qN4"/>
+                                    <constraint firstItem="uK9-nY-5SJ" firstAttribute="leading" secondItem="QFA-nl-34I" secondAttribute="leading" id="MsS-hU-MnB"/>
+                                    <constraint firstItem="uK9-nY-5SJ" firstAttribute="centerY" secondItem="QFA-nl-34I" secondAttribute="centerY" id="hoU-jc-HBN"/>
+                                    <constraint firstAttribute="trailing" secondItem="uK9-nY-5SJ" secondAttribute="trailing" id="lnU-Z7-cr1"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uK9-nY-5SJ" secondAttribute="bottom" id="roj-Np-Vw3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="cKp-l4-hQv" secondAttribute="bottom" id="Gur-5M-DNy"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="cKp-l4-hQv" secondAttribute="trailing" id="Uf4-US-9l3"/>
+                    <constraint firstItem="cKp-l4-hQv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="dcU-Ds-B78"/>
+                    <constraint firstItem="cKp-l4-hQv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="koe-GN-anq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="currencyLabel" destination="K1B-Tp-byJ" id="91g-MB-xov"/>
+                <outlet property="valueTextField" destination="uK9-nY-5SJ" id="Ere-ev-DEr"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
